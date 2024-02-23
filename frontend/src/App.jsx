@@ -5,6 +5,7 @@ import Header from './components/common/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Book from './pages/Book';
 
 // Importing the CSS file
 import './assets/Styles/Header.css';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path='/book' element={<Book />} />
       </Routes>
     </Router>
   );
