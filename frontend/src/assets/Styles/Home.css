@@ -1,0 +1,36 @@
+.hero {
+    background-image: url('../images/girl-on-table-reading.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: rgb(255, 255, 255);
+    margin: 0 -1px;
+}
+
+.hero .container {
+    text-align: center;
+}
+
+.hero .title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    filter: brightness(1);
+    margin-left: 85px;
+}
+
+.hero .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-left: 85px;
+}
+
+.hero .button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 85px;
+}
