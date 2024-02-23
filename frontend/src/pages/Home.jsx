@@ -1,17 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../assets/Styles/Home.css';
 
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Welcome to the BookUnluck!</p><br></br>
-      <p>BookUnluck is a book review website where you can find reviews for books you want to read.</p>
-      <li>
-        <ul><Link to="/login">Log in now</Link></ul>
-        <ul><Link to="/signup">Sign up now</Link></ul>
-      </li>
-    </div>
+    <main>
+      <section className="hero">
+        <div className="hero-body">
+          <div className="hero-content">
+            <h1 className="title">Welcome to BookUnluck</h1>
+            <h2 className="subtitle">The best place to find books</h2>
+            <Link
+              to="/signup"
+              className="button"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section>
+        
+      </section>
+    </main>
   );
 }
 
