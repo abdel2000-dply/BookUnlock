@@ -38,9 +38,9 @@ function Book() {
     return (
       <div>
         <BookCard bookData={bookData} />
+        {/* <BookCard bookData={bookData} />
         <BookCard bookData={bookData} />
-        <BookCard bookData={bookData} />
-        <BookCard bookData={bookData} />
+        <BookCard bookData={bookData} /> */}
       </div>
     );
   }
