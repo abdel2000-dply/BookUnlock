@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import BookCard
+from '../components/BookCard';
+import '../assets/Styles/BookCard.css';
 
 
 function Book() {
@@ -33,22 +36,13 @@ function Book() {
   
     // Display book details here using bookData
     return (
-        <div>
-          {bookData.volumeInfo.imageLinks && (
-            <img
-              src={bookData.volumeInfo.imageLinks.thumbnail}
-              alt={bookData.volumeInfo.title}
-            />
-          )}
-          <h1>{bookData.volumeInfo.title}</h1>
-          <p>By {bookData.volumeInfo.authors?.join(', ')}</p>
-          <p>{bookData.volumeInfo.description?.substring(0, 100) + "..."}</p>
-          {/* Access other book information using bookData object */}
-          <p>Published: {bookData.volumeInfo.publishedDate}</p>
-          <p>Average Rating: {bookData.volumeInfo.averageRating}</p>
-          <a href={bookData.infoLink}>More Info</a>
-        </div>
-      );
+      <div>
+        <BookCard bookData={bookData} />
+        <BookCard bookData={bookData} />
+        <BookCard bookData={bookData} />
+        <BookCard bookData={bookData} />
+      </div>
+    );
   }
   
   export default Book;
