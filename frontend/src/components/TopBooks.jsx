@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import BookList from "./BookList";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import BookList from "./BookList";
+import BookCard from "./BookCard";
+import "../assets/Styles/TopBooks.css";
 
 function TopBooks() {
   const [bookData, setBookData] = useState([]);
@@ -46,6 +51,16 @@ function TopBooks() {
     fetchBooks();
   }, []);
 
+  const settings = {
+    dots: true,
+    autoplay: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplaySpeed: 1500
+  };
+
   if (error) {
     return <div>Error: {error}</div>;
   }
@@ -54,9 +69,13 @@ function TopBooks() {
     return <div>Loading...</div>;
   }
   return (
-    <>
-      <BookList bookData={bookData} />
-    </>
+    <div className="slide-container">
+      <Slider {...settings}>
+        {bookData.map((bookData, index) => (
+          <BookCard key={index} book={bookData} />
+        ))}
+      </Slider>
+    </div>
   );
 }
 
