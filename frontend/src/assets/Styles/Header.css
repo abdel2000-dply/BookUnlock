@@ -1,63 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    height: 65px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 65px;
 }
 .navbar {
-    background-color: #eee;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #eee;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
 }
 
 .site-name {
-    font-family: "Lilita One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-    color: #333;
-    text-decoration: none;
-    margin-right: 85px;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #333;
+  text-decoration: none;
+  margin-right: 85px;
 }
 
 .navbar-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 85px;
 }
 
 .navbar-menu .navbar-item:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .navbar-item {
-    margin-right: 30px;
-    color: #333;
-    text-decoration: none;
+  padding: 24px;
+  /* margin-right: 30px; */
+  color: #333;
+  text-decoration: none;
 }
 
 .navbar-item:hover {
-    color: #555;
+  background-color: beige;
+  color: #555;
 }
 
 .profile {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
 }
