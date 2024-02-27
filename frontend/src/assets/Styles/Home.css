@@ -1,36 +1,50 @@
 .hero {
-    background-image: url('../images/girl-on-table-reading.png');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    color: rgb(255, 255, 255);
-    margin: 0 -1px;
+  background-image: url("../images/girl-on-table-reading.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: rgb(255, 255, 255);
+  margin: 0 -1px;
 }
 
 .hero .container {
-    text-align: center;
+  text-align: center;
 }
 
 .hero .title {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    filter: brightness(1);
-    margin-left: 85px;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  filter: brightness(1);
+  margin-left: 85px;
 }
 
 .hero .subtitle {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    margin-left: 85px;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  margin-left: 85px;
 }
 
 .hero .button {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-left: 85px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-left: 85px;
+}
+
+/* topbooks section */
+.top-books {
+  padding: 20px;
+  background-color: #f9f9f9; /* light gray */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-books h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333; /* dark gray */
 }
