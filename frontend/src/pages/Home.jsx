@@ -19,7 +19,7 @@ function Home() {
         </div>
       </section>
       {/*------------------------------------------------------------------ Newest books section */}
-      <section className="newest-books">
+      <section className="top-books">
         <h2>Top 10 Books in 2023</h2>
         <TopBooks />
       </section>
