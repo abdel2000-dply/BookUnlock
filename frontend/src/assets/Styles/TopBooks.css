@@ -1,0 +1,10 @@
+.slide-container {
+    width: 100%; /* Adjust as needed */
+    overflow: hidden; /* Prevents scrollable overflow */
+    padding: 20px; /* Optional: Adds some space around the carousel */
+}
+
+/* Optional: Styles for the individual slides */
+.slide-container .slick-slide {
+    padding: 10px; /* Adds some space between the slides */
+}
