@@ -7,8 +7,9 @@
   overflow: hidden; /* Clip content within card bounds */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  border-radius: 10px;
+  border-radius: 0 6% 6% 0/4%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 10px;
 }
 
 .book-card:hover {
@@ -17,7 +18,7 @@
 
 .book-card-image {
   width: 100%;
-  height: 100%; /* Image takes full card size */
+  height: 100%;
   position: absolute; /* Position image absolutely */
   top: 0;
   left: 0;
