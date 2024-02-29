@@ -27,20 +27,25 @@ function TopBooks() {
 
     const fetchBooks = async () => {
       try {
-        // make multiple promises at the same time and wait for all of them to complete.
-        const promises = TopBooks.map((book) => {
-          const url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${book.title}&printType=books&fields=items(volumeInfo)&key=${apiKey}&language=en`;
-          return fetch(url).then((response) => response.json());
-        });
+        let newBookData = JSON.parse(localStorage.getItem("bookData"));
 
-        const booksData = await Promise.all(promises);
+        if (!newBookData) {
+          const promises = TopBooks.map((book) => {
+            const url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${book.title}&printType=books&fields=items(volumeInfo)&key=${apiKey}&language=en`;
+            return fetch(url).then((response) => response.json());
+          });
 
-        const newBookData = booksData.flatMap((data) => {
-          const filteredData = data.items.filter(
-            (item) => item.volumeInfo.pageCount
-          );
-          return filteredData.length > 0 ? [filteredData[0]] : [];
-        });
+          const booksData = await Promise.all(promises);
+
+          newBookData = booksData.flatMap((data) => {
+            const filteredData = data.items.filter(
+              (item) => item.volumeInfo.pageCount
+            );
+            return filteredData.length > 0 ? [filteredData[0]] : [];
+          });
+
+          localStorage.setItem("bookData", JSON.stringify(newBookData));
+        }
 
         setBookData(newBookData);
       } catch (err) {
