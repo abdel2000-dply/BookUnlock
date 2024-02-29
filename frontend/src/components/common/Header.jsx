@@ -1,7 +1,29 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
+    //-----------------Sticky header-----------------
+    // const [isSticky, setIsSticky] = useState(false);
+
+    // const handleScroll = () => {
+    // const scrollTop = window.scrollY;
+    // const headerHeight = document.querySelector('header').offsetHeight; // Get header's height
+
+    // if (scrollTop > headerHeight) {
+    //     setIsSticky(true);
+    // } else {
+    //     setIsSticky(false);
+    // }
+    // };
+
+    // useEffect(() => {
+    // window.addEventListener('scroll', handleScroll);
+
+    // return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
+
     return (
+        // <header className={isSticky ? 'sticky' : ''}>
         <header>
             <nav className="navbar">
                 <div className="container">
