@@ -31,14 +31,14 @@ function Header() {
                         <a className="site-name" href="/">BookUnluck</a>
                     </div>
                     <div className="navbar-menu">
-                        <a className="navbar-item" href="">Home</a>
-                        <a className="navbar-item" href="">Browse books</a>
-                        <a className="navbar-item" href="">About us</a>
+                        <a className="navbar-item" href="/">Home</a>
+                        <a className="navbar-item" href="/explore">Explore</a>
+                        <a className="navbar-item" href="/">About us</a>
                     </div>
                 </div>
                 <div className="profile">
-                    <a className="navbar-item" href="/login">Log in</a>
                     <a className="navbar-item" href="/signup">Sign up</a>
+                    <a className="navbar-item" href="/login">Log in</a>
                 </div>
             </nav>
         </header>
