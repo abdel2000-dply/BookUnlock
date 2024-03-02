@@ -1,0 +1,90 @@
+.explore-container {
+    margin: 25px auto;
+    width: 70%;
+}
+.search-heading {
+  /* text-align: center; */
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc; 
+}
+
+.bytitle {
+  flex-grow: 3;
+  margin-right: 10px;
+}
+
+.byauthor {
+  flex-grow: 2;
+  margin-right: 10px;
+}
+
+.categories {
+  flex-grow: 1;
+}
+
+.search-button {
+  display: block;
+  margin-left: 15px;
+  width: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #b37d5e; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #b1693f;
+  transform: scale(0.9);
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* loading message */
+.loading {
+  text-align: center;
+  margin-top: 20px;
+  color: #333; 
+}
+
+/* error message */
+.error {
+  text-align: center;
+  margin-top: 20px;
+  color: #333; 
+}
+
+::placeholder{
+  font-size: 15px;
+  color: #ccc; 
+}
