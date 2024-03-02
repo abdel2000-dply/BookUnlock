@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Explore from './pages/Explore';
+import Book from './pages/Book';
 
 // Importing the CSS file
 import './assets/Styles/Header.css';
@@ -20,6 +21,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path='/explore' element={<Explore />} />
+  
+        <Route path="/books/:id" element={<Book />} />
       </Routes>
     </Router>
   );
