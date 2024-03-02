@@ -9,14 +9,16 @@ import "../assets/Styles/TopBooks.css";
 function TopBooks() {
   const [bookData, setBookData] = useState([]);
   const [error, setError] = useState(null);
+
+  
   const TopBooks = [
-    { title: "Iron Flame (The Empyrean, #2)" },
+    { title: "Iron Flame, Book 2" },
     { title: "Happy Place" },
     { title: "Love, Theoretically" },
-    { title: "The Stolen Heir (The Stolen Heir Duology, #1)" },
-    { title: "A Curse for True Love (Once Upon a Broken Heart, #3)" },
+    { title: "The Stolen Heir: A Novel of Elfhame" },
+    { title: "A Curse For True Love: the thrilling final book in the Once Upon a Broken Heart series" },
     { title: "Yellowface" },
-    { title: "The Bee Sting" },
+    { title: "The Bee Sting: A Novel" },
     { title: "Tress of the Emerald Sea (The Cosmere, #28)" },
     { title: "the heaven and earth grocery store" },
     { title: "Chain Gang All Stars" }
@@ -31,7 +33,7 @@ function TopBooks() {
 
         if (!newBookData) {
           const promises = TopBooks.map((book) => {
-            const url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${book.title}&printType=books&fields=items(volumeInfo)&key=${apiKey}&language=en`;
+            const url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${book.title}&printType=books&fields=items(id,volumeInfo)&key=${apiKey}&language=en`;
             return fetch(url).then((response) => response.json());
           });
 
@@ -43,8 +45,7 @@ function TopBooks() {
             );
             return filteredData.length > 0 ? [filteredData[0]] : [];
           });
-
-          localStorage.setItem("bookData", JSON.stringify(newBookData));
+          // localStorage.setItem("bookData", JSON.stringify(newBookData));
         }
 
         setBookData(newBookData);
