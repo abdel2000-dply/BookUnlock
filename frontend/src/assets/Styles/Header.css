@@ -3,28 +3,45 @@
 header {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  height: 5.9rem;
+  height: 5.3rem;
   width: 100%;
-  transition: background-color 1.2s ease-in-out;
+  transition: top 0.6s;
+}
+.header-show {
+  top: 0;
+}
+
+.header-hide {
+  top: -100px;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  width: 18rem;
 }
+
+.navbar-brand img {
+  width: 100%;
+  height: auto;
+}
+
 .navbar {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
-  padding : 0 8rem;
+  padding: 0 8rem;
+  backdrop-filter: blur(15px);
 }
 
 .container {
+  margin-left: 15px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -34,24 +51,21 @@ header {
 .navbar-menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-menu .navbar-item:last-child {
-  margin-right: 0;
+  gap: 2.5rem;
 }
 
 .navbar-item {
-  padding: 24px;
-  color: #333;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #000000;
   text-decoration: none;
 }
 
 .navbar-item:hover {
-  background-color: beige;
-  color: #555;
+  color: #453d3d;
 }
 
-.profile {
-/* */
-} 
+.navbar-item.user:first-child {
+  margin-right: 15px;
+}
+
