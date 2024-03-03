@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Logo from "../../assets/images/book-unluck-logo.png";
 
 function Header() {
     //-----------------Sticky header-----------------
@@ -26,19 +27,21 @@ function Header() {
         // <header className={isSticky ? 'sticky' : ''}>
         <header>
             <nav className="navbar">
+                <div className="navbar-brand">
+                    <a href="/">
+                        <img src={Logo} alt="bookunluck" className="logo"/>
+                    </a>
+                </div>
                 <div className="container">
-                    <div className="navbar-brand">
-                        <a className="site-name" href="/">BookUnluck</a>
-                    </div>
                     <div className="navbar-menu">
                         <a className="navbar-item" href="/">Home</a>
                         <a className="navbar-item" href="/explore">Explore</a>
                         <a className="navbar-item" href="/">About us</a>
                     </div>
-                </div>
-                <div className="profile">
-                    <a className="navbar-item" href="/signup">Sign up</a>
-                    <a className="navbar-item" href="/login">Log in</a>
+                    <div className="profile">
+                        <a className="navbar-item" href="/signup">Sign up</a>
+                        <a className="navbar-item" href="/login">Log in</a>
+                    </div>
                 </div>
             </nav>
         </header>
