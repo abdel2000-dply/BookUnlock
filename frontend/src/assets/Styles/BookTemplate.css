@@ -15,7 +15,6 @@
 .book-image {
   width: 25%;
   margin: 5px 25px;
-  border-radius: 0 6% 6% 0/4%;
   overflow: hidden;
   filter: drop-shadow(0 0.2rem 0.8rem rgba(0, 0, 0, 0.2));
 }
@@ -23,7 +22,7 @@
 .book-image img {
   width: 100%;
   height: auto;
-  border-radius: 0 9% 6% 0/4%;
+  border-radius: 0 6% 6% 0/4%;
 }
 
 .book-details {
