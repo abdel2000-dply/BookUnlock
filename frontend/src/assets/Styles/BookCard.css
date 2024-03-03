@@ -1,15 +1,16 @@
 .book-card {
   display: flex;
   flex-direction: column;
-  width: 220px; /* Adjust width as needed */
-  height: 320px; /* Adjust height as needed */
-  position: relative; /* Enable overlay positioning */
-  overflow: hidden; /* Clip content within card bounds */
+  width: 220px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 0 6% 6% 0/4%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  filter: drop-shadow(0 0.2rem 0.8rem rgba(0, 0, 0, 0.2));
 }
 
 .book-card:hover {
