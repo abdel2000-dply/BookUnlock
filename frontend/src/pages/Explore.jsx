@@ -112,7 +112,7 @@ function Explore() {
         handleSearch={handleSearch}
       />
       {error && <div className="error">{error}</div>}
-      <div className="book-container">
+      <div className="books-container">
         {bookData &&
           bookData.map(
             (book) => (
