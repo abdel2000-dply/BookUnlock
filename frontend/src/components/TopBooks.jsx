@@ -59,7 +59,7 @@ function TopBooks() {
 
   const settings = {
     dots: true,
-    autoplay: true,
+    // autoplay: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
