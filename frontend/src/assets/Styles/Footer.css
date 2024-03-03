@@ -1,0 +1,23 @@
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    /* position: fixed;
+    left: 0;
+    bottom: 0; */
+    width: 100%;
+}
+
+
+.social-icons {
+    list-style: none;
+    display: flex;
+}
+
+.social-icons li {
+    margin-left: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    text-decoration: none;
+}
