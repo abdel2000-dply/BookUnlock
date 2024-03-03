@@ -46,7 +46,7 @@ function Book() {
       <div className="book-details">
         <h1>{book.volumeInfo.title}</h1>
         <p className="authors">{book.volumeInfo.authors.join(", ")}</p>
-        <p className="description">{parse(book.volumeInfo.description)}</p>
+        <div className="description">{parse(book.volumeInfo.description)}</div>
         <div className="metadata">
           <p>Page Count: {book.volumeInfo.pageCount}</p>
           <p>Published Date: {book.volumeInfo.publishedDate}</p>
