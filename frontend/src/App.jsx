@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -10,6 +11,7 @@ import Book from './pages/Book';
 
 // Importing the CSS file
 import './assets/Styles/Header.css';
+import './assets/Styles/Footer.css';
 import './index.css';
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
   
         <Route path="/books/:id" element={<Book />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
