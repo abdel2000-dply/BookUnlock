@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import HeroImage from "../assets/images/reading-a-book-illustration.png";
 import "../assets/Styles/Home.css";
 import TopBooks from "../components/TopBooks";
-import OpenBook from "../assets/images/open-book.png";
+import OpenBook from "../assets/images/open-book-svg.svg";
 
 function Home() {
   return (
@@ -12,12 +12,17 @@ function Home() {
       <section className="hero">
         <div className="hero-body">
           <div className="hero-text-content">
-            <h1 className="hero-title">Welcome to BookUnluck</h1>
-            <h2 className="hero-subtitle">The best place to find books</h2>
-            <Link to="/signup" className="call-to-action">
+            <h1 className="hero-title">Find Books<br />That Inspire And Entertain You</h1>
+            <h2 className="hero-subtitle">Discover hidden gems, share your opinions, and get started today at the best place to find books</h2>
+            <div className="hero-button">
+            <Link to="/explore" className="call-to-action">
               <img src={OpenBook} alt="open book" className="open-book-icon" />
               Explore
             </Link>
+            <Link to="/signup" className="join">
+              Join
+            </Link>
+            </div>
           </div>
           <div className="hero-image-content">
             <img src={HeroImage} alt="Hero image" />
