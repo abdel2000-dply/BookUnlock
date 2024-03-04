@@ -12,7 +12,7 @@ import Book from './pages/Book';
 // Importing the CSS file
 import './assets/Styles/Header.css';
 import './assets/Styles/Footer.css';
-import './index.css';
+import './assets/Styles/index.css';
 
 function App() {
   return(
