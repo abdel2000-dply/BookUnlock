@@ -7,7 +7,7 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
+      let st = document.documentElement.scrollTop;
       if (st > lastScrollTop) {
         setHeaderShow(false);
       } else {
