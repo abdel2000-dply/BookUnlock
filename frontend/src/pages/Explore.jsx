@@ -68,7 +68,7 @@ function Explore() {
         });
       }
 
-      url += `&printType=books&key=${apiKey}&language=en`;
+      url += `&orderby=relevance&printType=books&key=${apiKey}&language=en`;
 
       const response = await fetch(url);
       const data = await response.json();
@@ -99,6 +99,7 @@ function Explore() {
   }
 
   return (
+    <div className="explore-page">
     <div className="explore-container">
       <h2 className="search-heading">Find new books to read</h2>
       <SearchBar
@@ -120,6 +121,7 @@ function Explore() {
             )
           )}
       </div>
+    </div>
     </div>
   );
 }
