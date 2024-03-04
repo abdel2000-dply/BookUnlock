@@ -45,7 +45,7 @@ function TopBooks() {
             );
             return filteredData.length > 0 ? [filteredData[0]] : [];
           });
-          // localStorage.setItem("bookData", JSON.stringify(newBookData));
+          localStorage.setItem("bookData", JSON.stringify(newBookData));
         }
 
         setBookData(newBookData);
