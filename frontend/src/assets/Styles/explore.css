@@ -1,6 +1,14 @@
+.explore-page {
+  min-height: 90vh;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/paper-background.png");
+}
 .explore-container {
-  margin: 25px auto;
+  margin: 0 auto;
+  padding: 40px 0px;
   width: 70%;
+  backdrop-filter: blur(2px);
 }
 .search-heading {
   /* text-align: center; */
