@@ -2,24 +2,33 @@
   min-height: 90vh;
   height: 100%;
   width: 100%;
-  background-image: url("../images/paper-background.png");
+  /* background-image: url("../images/paper-background.png"); */
 }
-.explore-container {
-  margin: 0 auto;
-  padding: 40px 0px;
-  width: 70%;
-  backdrop-filter: blur(2px);
+.e-s-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/paper-background.png");
+  height: 13rem;
+  padding-bottom: 0.3rem;
 }
 .search-heading {
-  /* text-align: center; */
+  text-align: center;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
+.explore-bar {
+  /* margin: 0 auto;
+  padding: 40px 0px;*/
+  width: 70%;
+  /* backdrop-filter: blur(2px); */
+}
 .search-bar-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
 }
 
 .search-bar {
@@ -99,5 +108,5 @@
 
 ::placeholder {
   font-size: 15px;
-  color: #ccc;
+  color: #b4b4b4;
 }
