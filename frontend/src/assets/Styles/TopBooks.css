@@ -1,10 +1,40 @@
-.slide-container {
-  width: 100%; /* Adjust as needed */
-  overflow: hidden; /* Prevents scrollable overflow */
-  padding: 30px; /* Optional: Adds some space around the carousel */
+/* topbooks section */
+.top-books {
+  background-color: rgb(237 235 222 / 50%);
+  /* background-image: url("../images/paper-background.png"); */
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-/* Optional: Styles for the individual slides */
+.top-books h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+.slide-container {
+  width: 90%;
+  overflow: hidden;
+  padding: 30px;
+}
+
 .slide-container .slick-slide {
-  padding: 0px; /* Adds some space between the slides */
+  padding: 0px; 
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: space-around;
+}
+
+.slick-dots {
+  bottom: -35px !important;
+}
+
+.slick-dots li {
+  width: 25px !important;
 }
