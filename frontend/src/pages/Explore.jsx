@@ -5,12 +5,10 @@ import "../assets/Styles/BookCard.css";
 import "../assets/Styles/explore.css";
 
 function Explore() {
-  const [bookData, setBookData] = useState(null);
+  const [bookData, setBookData] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchAuthor, setSearchAuthor] = useState("");
-  const [display, setDisplay] = useState(false);
 
   const options = [
     { value: "art", label: "Art" },
@@ -42,25 +40,27 @@ function Explore() {
     { value: "ebooks", label: "Ebooks" },
     { value: "graphicnovels", label: "Graphic Novels" },
     { value: "chicklit", label: "Chick Lit" }
-    // ... you can add more categories here if needed
+    // more if needed
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchClicked, setSearchClicked] = useState(false);
+  const [clicked, setClicked] = useState(0);
+  
 
   const apiKey = "AIzaSyCvF51voi8E3lwf44fOIkQ75VwWJXkzuVk";
 
   const fetchBooks = async () => {
-    setLoading(true); // Set loading to true when the fetch starts
     setError(null); // Reset the error state
-
+    console.log('fetchBooks called');
     try {
       let url = "https://www.googleapis.com/books/v1/volumes?q=";
 
       // If there are no search parameters, fetch random books
       if (!searchTitle && !searchAuthor && !selectedCategory) {
-        url += `orderBy=newest&maxResults=10&key=${apiKey}&language=en`;
+        url += `startIndex=${
+          (currentPage - 1) * 10
+        }&maxResults=10&printType=books&orderBy=newest&key=${apiKey}&language=en`;
       } else {
         if (searchTitle) {
           url += `intitle:${encodeURIComponent(searchTitle)}`;
@@ -75,7 +75,7 @@ function Explore() {
         }
         url += `&startIndex=${
           (currentPage - 1) * 10
-        }&maxResults=10&orderBy=relevance&printType=books&key=${apiKey}&language=en`;
+        }&maxResults=10&printType=books&key=${apiKey}&language=en`;
       }
 
       const response = await fetch(url);
@@ -87,40 +87,33 @@ function Explore() {
         return;
       }
 
-      const filteredBooks = data.items.filter(
-        (book) => book.volumeInfo.pageCount
-      );
-      setBookData(filteredBooks);
+      setBookData((prevBooks) => {
+        const newBooks = data.items.filter(
+          (newBook) => !prevBooks.some((prevBook) => prevBook.id === newBook.id)
+        );
+        return [...prevBooks, ...newBooks];
+      });
+
     } catch (err) {
       setError("Error fetching book data.");
-    } finally {
-      setLoading(false); // Set loading to false when the fetch is complete
     }
   };
 
-  // Add a function to go to the next page
-  const goToNextPage = () => {
+
+  const loadMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
 
-  // Add a function to go to the previous page
-  const goToPreviousPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
-  };
-
   useEffect(() => {
-    fetchBooks();
-  }, [searchClicked, currentPage]);
+      fetchBooks();
+  }, [clicked, currentPage]);
 
   const handleSearch = () => {
     setCurrentPage(1); // Reset the currentPage to 1
-    setDisplay(true); // Display the books after the search
-    setSearchClicked((prev) => !prev); // Toggle searchClicked
+    setBookData([]);
+    setClicked((prevClicked) => prevClicked + 1);
   };
 
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
 
   return (
     <div className="explore-page">
@@ -142,15 +135,12 @@ function Explore() {
           {bookData &&
             bookData.map(
               (book) => (
-                console.log(book.id), (<BookCard book={book} key={book.id} />)
+                (<BookCard book={book} key={book.id} />)
               )
             )}
         </div>
-        <div className="pagination">
-          {currentPage > 1 && (
-            <button onClick={goToPreviousPage}>Previous</button>
-          )}
-          {display && <button onClick={goToNextPage}>Next</button>}
+        <div className="show-more">
+        <button className="loadmore" onClick={loadMore}>Load More</button>
         </div>
       </div>
     </div>
