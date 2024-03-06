@@ -15,11 +15,11 @@ function TopBooks() {
     { title: "Iron Flame, Book 2" },
     { title: "Happy Place" },
     { title: "Love, Theoretically" },
-    { title: "The Stolen Heir: A Novel of Elfhame" },
+    { title: "The Stolen Heir: A Novel of Elfhame, The No 1 Sunday Times Bestseller 2023" },
     { title: "A Curse For True Love: the thrilling final book in the Once Upon a Broken Heart series" },
-    { title: "Yellowface" },
+    { title: "Yellowface " },
     { title: "The Bee Sting: A Novel" },
-    { title: "Tress of the Emerald Sea (The Cosmere, #28)" },
+    { title: "Tress of the Emerald Sea: A Cosmere Novel" },
     { title: "the heaven and earth grocery store" },
     { title: "Chain Gang All Stars" }
   ];
@@ -71,15 +71,17 @@ function TopBooks() {
     return <div>Error: {error}</div>;
   }
 
-  if (bookData.length === 0) {
-    return <div>Loading...</div>;
-  }
+  // if (bookData.length === 0) {
+  //   return <div>Loading...</div>;
+  // }
+
+
   return (
     <div className="slide-container">
       <Slider {...settings}>
-        {bookData.map((bookData, index) => (
-          <BookCard key={index} book={bookData} />
-        ))}
+        {bookData.map((book, index) => {
+          return <BookCard key={index} book={book} />
+        })}
       </Slider>
     </div>
   );
