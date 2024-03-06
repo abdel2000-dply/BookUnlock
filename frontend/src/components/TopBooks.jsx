@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import BookList from "./BookList";
+
 import BookCard from "./BookCard";
+
 import "../assets/Styles/TopBooks.css";
 
 function TopBooks() {
@@ -59,7 +60,7 @@ function TopBooks() {
 
   const settings = {
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -74,7 +75,6 @@ function TopBooks() {
   // if (bookData.length === 0) {
   //   return <div>Loading...</div>;
   // }
-
 
   return (
     <div className="slide-container">
