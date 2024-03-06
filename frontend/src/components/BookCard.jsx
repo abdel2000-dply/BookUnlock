@@ -12,10 +12,14 @@ function BookCard({ book }) {
         <div className="book-card-image">
           {book.volumeInfo.imageLinks && (
             <img
-              src={book.volumeInfo.imageLinks.thumbnail.replace(
-                "zoom=1",
-                "zoom=3"
-              )}
+              // for better image replace zoom=1 with zoom=3
+              // there is a bug in the API the good quality images are not always available
+              // src={book.volumeInfo.imageLinks.thumbnail.replace(
+              //   /zoom=\d+/,
+              //   "zoom=3"
+              // )}
+              // src = {book.volumeInfo.imageLinks.thumbnail}
+              src={book.volumeInfo.imageLinks.meduim ? book.volumeInfo.imageLinks.meduim : book.volumeInfo.imageLinks.thumbnail}
               alt={book.volumeInfo.title}
             />
           )}
