@@ -1,0 +1,103 @@
+/* hero section styling */
+
+.hero {
+  /* background-image: url("../images/girl-on-table-reading.png"); */
+  background-image: url("../images/paper-background.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  padding: 1rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  /* margin: 0 -1px; */
+}
+
+.hero .hero-title {
+  font-size: 5em;
+  font-family: "sans-serif", Oswald;
+  margin-bottom: 0.3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-subtitle {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.hero .call-to-action {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(148 42 69);
+  color: rgb(255 255 255 / 90%);
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 0.7rem 2rem 0.7rem 1.7rem;
+  text-decoration: none;
+  border-radius: 25px 0px;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+.hero .call-to-action:hover {
+  background-color: rgb(114 39 58);
+  color: rgb(255 255 255 / 100%);;
+}
+
+.open-book-icon {
+  font-size: 3em;
+  padding-right: 0.3rem;
+  fill: #007BFF;
+  vertical-align: center;
+}
+
+.hero-button {
+  margin-top: 2em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.join {
+  /* padding: 0.7rem 2rem; */
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #942a45;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 0.7rem 2rem 0.7rem 1.7rem;
+  text-decoration: none;
+  border-radius: 25px 0px;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.join:hover {
+  background-color: #942a45;
+  color: rgb(0, 0, 0);
+}
+
+.hero-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text-content {
+  flex: 1;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0);
+  padding-left: 5rem;
+}
+
+.hero-image-content {
+  flex: 1;
+}
+
+.hero-image-content img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.8);
+}
+
