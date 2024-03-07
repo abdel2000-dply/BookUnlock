@@ -14,3 +14,10 @@ body {
   font-family: Roboto, sans-serif;
   /* background-color: #f4f4f4; */
 }
+
+button:hover,
+.search-button:hover,
+.join:hover,
+.call-to-action:hover {
+  transform: scale(0.9);
+}
