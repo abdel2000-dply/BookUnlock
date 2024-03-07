@@ -3,6 +3,9 @@
   height: 100%;
   width: 100%;
   /* background-image: url("../images/paper-background.png"); */
+  background: url("../images/fallen-leaves-background.png");
+  background-size: contain;
+  background-repeat: repeat-y;
 }
 .e-s-container {
   display: flex;
