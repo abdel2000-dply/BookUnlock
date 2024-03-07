@@ -50,27 +50,33 @@ function Home() {
         <TopBooks />
       </section>
       <section className="about">
-        <h2>About BookUnluck</h2>
         <div className="about-intro">
-          <div>
-          <h3>Delve into the Worlds You Love</h3>
-          <p>
-            BookUnlock is your gateway to a boundless universe of literature.
-            We're a platform powered by the Google Books API, designed to
-            empower book discovery and exploration for readers of all stripes.
-            Whether you're a seasoned bibliophile or just starting your literary
-            adventure, BookUnlock is your one-stop for finding your next great
-            read.
-          </p>
-          {/* add a quete  */}
-          </div>
           <div className="library-img-container">
             <img src={Library} alt="Bookunluck library" />
           </div>
+          <div className="bookunluck-intro">
+            <h2>About BookUnluck</h2>
+            <h3>Delve into the Worlds You Love</h3>
+            <p className="about-paragraph">
+              BookUnlock is your gateway to a boundless universe of literature.
+              We're a platform powered by the Google Books API, designed to
+              empower book discovery and exploration for readers of all stripes.
+              Whether you're a seasoned bibliophile or just starting your
+              literary adventure, BookUnlock is your one-stop for finding your
+              next great read.
+            </p>
+            {/* add a quete  */}
+            <div className="quote">
+              <blockquote>
+                "A reader lives a thousand lives before he dies." - George R.R.
+              </blockquote>
+            </div>
+          </div>
         </div>
+        <div className="about-features">
           <div className="ourmission-container">
             <h3>Our Mission</h3>
-            <p>
+            <p className="about-paragraph">
               Our mission is to connect readers with the books they love. We
               believe that books are a powerful tool for personal growth and
               development, and we want to make it easier for readers to find the
@@ -84,27 +90,28 @@ function Home() {
             <div className="reasons-container">
               <div className="reason-block">
                 <p>
-                  BookUnlock is the best place to find books because we make it easy
-                  to discover new books, share your opinions, and connect with other
-                  readers.
+                  BookUnlock is the best place to find books because we make it
+                  easy to discover new books, share your opinions, and connect
+                  with other readers.
                 </p>
               </div>
               <div className="reason-block">
                 <p>
-                  Our platform is powered by the Google Books API, so you
-                  can be sure that you're getting the most accurate and up-to-date
+                  Our platform is powered by the Google Books API, so you can be
+                  sure that you're getting the most accurate and up-to-date
                   information about the books you love.
                 </p>
               </div>
               <div className="reason-block">
                 <p>
-                  Whether you're looking for your next great read or want to connect with other readers who
-                  share your interests, BookUnlock is the place to be.
+                  Whether you're looking for your next great read or want to
+                  connect with other readers who share your interests,
+                  BookUnlock is the place to be.
                 </p>
               </div>
             </div>
           </div>
-
+        </div>
       </section>
     </main>
   );
