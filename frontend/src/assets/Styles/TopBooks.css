@@ -1,7 +1,8 @@
 /* topbooks section */
 .top-books {
-  background-color: rgb(237 235 222 / 30%);
-  /* background-image: url("../images/paper-background.png"); */
+  /* background-color: rgb(237 235 222 / 30%); */
+  background: url("../images/fallen-leaves-background.png"), rgb(237 235 222 / 45%);
+  background-size: contain;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -23,9 +24,11 @@
 
 .top-books h2 {
   margin-bottom: 20px;
+  padding: 1rem;
   text-align: center;
   color: #000000;
   font-weight: bold;
+  backdrop-filter: blur(15px);
 }
 
 .slide-container {
