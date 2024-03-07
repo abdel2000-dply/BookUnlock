@@ -76,5 +76,5 @@ header {
 }
 .navbar-item.user:first-child:hover {
   background-color: #8e5f3d;
+  transform: scale(0.95);
 }
-
