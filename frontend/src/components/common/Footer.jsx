@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <p>&copy; 2022 BookUnluck. All rights reserved.</p>
+                <p>&copy; 2024 BookUnluck. All rights reserved.</p>
                 <ul className="social-icons">
                     <li>
                         <a href="https://twitter.com/bookunluck" target="_blank" rel="noopener noreferrer">
