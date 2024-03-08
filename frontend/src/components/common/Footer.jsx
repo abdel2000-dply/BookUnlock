@@ -1,6 +1,8 @@
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const Footer = () => {
+function Footer()
+{
     return (
         <footer>
             <div className="container">
@@ -8,17 +10,17 @@ const Footer = () => {
                 <ul className="social-icons">
                     <li>
                         <a href="https://twitter.com/bookunluck" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/bookunluck" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-facebook"></i>
+                            <FontAwesomeIcon icon={faTwitter} />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/bookunluck" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-instagram"></i>
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/bookunluck" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faFacebook} />
                         </a>
                     </li>
                 </ul>
