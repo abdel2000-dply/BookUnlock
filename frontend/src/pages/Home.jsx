@@ -1,13 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import images
 import HeroImage from "../assets/images/reading-a-book-illustration.png";
 import Library from "../assets/images/bookunluck-library.jpg";
+import abdel from "../assets/images/abdel-selfie.png";
+// import components
 import TopBooks from "../components/TopBooks";
 import OpenBook from "../assets/images/open-book-svg.svg";
+// import fontawesome icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faGithub,
+  faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
 
 // import CSS files
 import "../assets/Styles/Hero.css";
 import "../assets/Styles/about.css";
+import "../assets/Styles/Ourteam.css";
 
 function Home() {
   return (
@@ -110,6 +121,49 @@ function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="ourteam">
+        <h2>Meet Our Team</h2>
+        <div className="team-members">
+          <div className="team-member">
+            <img
+              src={abdel}
+              alt="team member: abdellah abnoune"
+              className="team-member-image"
+            />
+            <h3>Abdellah Abnoune</h3>
+            <p>Full Stack Developer</p>
+            <ul className="social-media-icons">
+              <li>
+                <a
+                  href="https://twitter.com/Abdel2272"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/abdellah-abnoune-646299180/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/abdel2000-dply"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
