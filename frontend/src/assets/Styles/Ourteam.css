@@ -1,0 +1,59 @@
+.ourteam {
+  text-align: center;
+  padding: 2rem 0;
+  background: url("../images/fallen-leaves-background.png"),
+    rgb(237 235 222 / 45%);
+  background-size: contain;
+}
+
+.ourteam h2 {
+  margin-bottom: 20px;
+  padding: 1rem;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  backdrop-filter: blur(15px);
+}
+
+.team-member h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.team-member p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.team-member {
+  width: 200px;
+}
+
+.team-member-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.social-media-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-media-icons li {
+  display: inline-block;
+}
+
+.social-media-icons img {
+  width: 24px;
+  height: 24px;
+}
