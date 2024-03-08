@@ -35,7 +35,7 @@ function Book() {
       <div className="book-image">
         {book.volumeInfo.imageLinks && (
           <img
-            src={book.volumeInfo.imageLinks.medium ? book.volumeInfo.imageLinks.medium : book.volumeInfo.imageLinks.thumbnail}
+            src={book.volumeInfo.imageLinks.thumbnail}
             alt={book.volumeInfo.title}
           />
         )}
