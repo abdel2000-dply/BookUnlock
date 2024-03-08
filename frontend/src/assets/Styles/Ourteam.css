@@ -4,6 +4,7 @@
   background: url("../images/fallen-leaves-background.png"),
     rgb(237 235 222 / 45%);
   background-size: contain;
+  background-repeat: round;
 }
 
 .ourteam h2 {
@@ -42,6 +43,7 @@
 }
 
 .social-media-icons {
+  font-size: 1.6rem;
   list-style: none;
   padding: 0;
   display: flex;
@@ -56,4 +58,9 @@
 .social-media-icons img {
   width: 24px;
   height: 24px;
+}
+
+.social-media-icons a {
+  color: #333;
+  text-decoration: none;
 }
