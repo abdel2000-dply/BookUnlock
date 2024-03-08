@@ -9,6 +9,7 @@ footer {
 
 
 .social-icons {
+    padding: 0px 2rem;
     list-style: none;
     display: flex;
 }
