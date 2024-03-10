@@ -10,7 +10,7 @@ from sqlalchemy.sql import func
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
-from .baseModel import BaseModel, db
+from .base_model import BaseModel, db
 
 class User(BaseModel):
     """User model"""
