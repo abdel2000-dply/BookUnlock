@@ -43,4 +43,16 @@ class User(BaseModel):
     
     def check_password(self, password):
         """Check the password"""
-        return check_password_hash(self.password, password)
+        # return check_password_hash(self.password, password)
+        return self.password == password
+
+    @property
+    def is_authenticated(self):
+        return True
+    
+    @property
+    def is_active(self):
+        return True
+    
+    def get_id(self):
+        return self.id
