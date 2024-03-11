@@ -43,9 +43,9 @@ function Header() {
             <HashLink className='navbar-item' to='/#aboutus'>
               About Us
             </HashLink>
-            <a className='navbar-item' href='#topbooks'>
+            <HashLink className='navbar-item' to='/#topbooks'>
               Top 10 Books
-            </a>
+            </HashLink>
           </div>
           <div className='profile'>
             <a className='navbar-item user' href='/signup'>
