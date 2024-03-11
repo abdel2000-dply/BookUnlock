@@ -56,11 +56,11 @@ function Home() {
         </div>
       </section>
       {/*------------------------------------------------------------------ Top 10 books in 2023 section */}
-      <section className="top-books">
+      <section className="top-books" id="topbooks">
         <h2>Top 10 Books in 2023</h2>
         <TopBooks />
       </section>
-      <section className="about">
+      <section className="about" id="aboutus">
         <div className="about-intro">
           <div className="library-img-container">
             <img src={Library} alt="Bookunluck library" />
@@ -164,6 +164,9 @@ function Home() {
                 </a>
               </li>
             </ul>
+            <a className="navbar-item" href="https://github.com/abdel2000-dply/BookUnluck" target="_blank" rel="noopener noreferrer">
+              Source code
+            </a>
           </div>
         </div>
       </section>
