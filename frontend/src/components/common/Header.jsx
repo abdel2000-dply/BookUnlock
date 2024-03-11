@@ -38,8 +38,11 @@ function Header() {
             <a className="navbar-item" href="/explore">
               Explore
             </a>
-            <a className="navbar-item" href="/">
+            <a className="navbar-item" href="#aboutus">
               About us
+            </a>
+            <a className="navbar-item" href="#topbooks">
+              Top 10 Books
             </a>
           </div>
           <div className="profile">
