@@ -3,9 +3,11 @@ from flask_login import LoginManager
 from models.base_model import db
 from models.user import User
 from flask_migrate import Migrate
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Directly set configuration variables
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', '12345678')
