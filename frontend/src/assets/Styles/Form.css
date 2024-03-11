@@ -15,7 +15,7 @@
     margin-bottom: 1rem;
 }
 
-form {
+.form-container form {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -25,18 +25,18 @@ form {
     background-color: white;
 }
 
-label {
+.form-container label {
     margin-bottom: 5px;
 }
 
-input[type="text"], input[type="password"] {
+.form-container input[type="text"], .form-container input[type="password"] {
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-input[type="submit"] {
+.form-container input[type="submit"] {
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -45,6 +45,6 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.form-container input[type="submit"]:hover {
     background-color: #b17042;
 }
