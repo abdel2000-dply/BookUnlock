@@ -5,10 +5,25 @@ Structure:
 ```
 BookUnlock/
 |-- backend/
-|   |-- api/
-|   |   |-- v1/
-|   |   |   |-- app.py
-|   |-- models/
+|   |-- README.md
+|   |-- models
+|   |   |-- base_model.py
+|   |   |-- review.py
+    |   |-- user.py
+    |   |-- __init__.py
+    |-- API
+    |   |-- __init__.py
+    |   |-- v1
+    |       |-- app.py
+    |       |-- __init__.py
+    |       |-- views
+    |           |-- auth.py
+    |           |-- index.py
+    |           |-- users.py
+    |           |-- __init__.py
+
+|   
+|   
 |-- frontend/
 |   |-- react-app/
 |   |   |-- ...
