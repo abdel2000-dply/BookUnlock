@@ -1,2 +1,6 @@
 #ignore the vertual envirements
 venv/
+#ignore the node_modules
+node_modules/
+#ignore the __pycache__
+**/__pycache__/
