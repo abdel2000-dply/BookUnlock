@@ -53,3 +53,7 @@
 .slick-dots li {
   width: 25px !important;
 }
+
+.slick-prev:before, .slick-next:before {
+  color: #000000;
+}
