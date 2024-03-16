@@ -11,13 +11,18 @@ function TopBooks() {
   const [bookData, setBookData] = useState([]);
   const [error, setError] = useState(null);
 
-  
   const TopBooks = [
     { title: "Iron Flame, Book 2" },
     { title: "Happy Place" },
     { title: "Love, Theoretically" },
-    { title: "The Stolen Heir: A Novel of Elfhame, The No 1 Sunday Times Bestseller 2023" },
-    { title: "A Curse For True Love: the thrilling final book in the Once Upon a Broken Heart series" },
+    {
+      title:
+        "The Stolen Heir: A Novel of Elfhame, The No 1 Sunday Times Bestseller 2023"
+    },
+    {
+      title:
+        "A Curse For True Love: the thrilling final book in the Once Upon a Broken Heart series"
+    },
     { title: "Yellowface " },
     { title: "The Bee Sting: A Novel" },
     { title: "Tress of the Emerald Sea: A Cosmere Novel" },
@@ -34,7 +39,11 @@ function TopBooks() {
 
         if (!newBookData) {
           const promises = TopBooks.map((book) => {
-            const url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${book.title}&printType=books&fields=items(id,volumeInfo)&key=${apiKey}&language=en`;
+            const url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${book.title}` +
+            `&printType=books` +
+            `&fields=items(id,volumeInfo)` +
+            `&key=${apiKey}` +
+            `&language=en`;
             return fetch(url).then((response) => response.json());
           });
 
@@ -77,10 +86,10 @@ function TopBooks() {
   // }
 
   return (
-    <div className="slide-container">
+    <div className='slide-container'>
       <Slider {...settings}>
         {bookData.map((book, index) => {
-          return <BookCard key={index} book={book} />
+          return <BookCard key={index} book={book} />;
         })}
       </Slider>
     </div>
