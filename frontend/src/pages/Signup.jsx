@@ -24,7 +24,7 @@ function Signup() {
         if (response.ok) {
             alert("Signup successful");
         } else {
-            console.log("Signup failed");
+            alert("Signup failed");
         }
     };
 
