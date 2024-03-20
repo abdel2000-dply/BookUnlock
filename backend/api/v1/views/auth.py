@@ -5,9 +5,9 @@ from flask import jsonify, make_response, request
 from flask_login import login_user, logout_user, login_required, current_user
 from models.user import User
 from api.v1.views import app_views
-# from .auth_utils import generate_token
+from .auth_utils import generate_token
 
-@app_views.route('/login', methods=['POST'], strict_slashes=False)
+@app_views.route('/login', methods=['POST'])
 def login():
     """Logs in a user"""
     data = request.get_json()
@@ -26,20 +26,21 @@ def login():
     # Check if the user exists and if the password is correct
     if user and user.check_password(password):
         login_user(user)
-        # token = generate_token(user)
-        return make_response(jsonify({"message": "Login successful"}), 200)
+        token = generate_token(user)
+        return make_response(jsonify(
+            {"token": token, "user": user.to_dict(), "message": "Login successful"}), 200)
 
     return make_response(jsonify({"error": "Invalid username or password"}), 401)
 
 
-@app_views.route('/logout', methods=['DELETE'], strict_slashes=False)
+@app_views.route('/logout', methods=['DELETE'])
 @login_required
 def logout():
     """Logs out a user"""
     logout_user()
     return make_response(jsonify({"message": "Logout successful"}), 200)
 
-@app_views.route('/signup', methods=['POST'], strict_slashes=False)
+@app_views.route('/signup', methods=['POST'])
 def signup():
     """Creates a user"""
     data = request.get_json()
