@@ -1,1 +1,0 @@
-""" configuration for the api """
