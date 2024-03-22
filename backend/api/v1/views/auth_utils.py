@@ -12,4 +12,4 @@ def generate_token(user):
         'user_id': user.id,
         'exp': expiration
     }
-    return jwt.encode(token_data, current_app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+    return jwt.encode(token_data, current_app.config['SECRET_KEY'], algorithm='HS256')
