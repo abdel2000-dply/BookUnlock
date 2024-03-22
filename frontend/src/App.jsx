@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Explore from './pages/Explore';
 import Book from './pages/Book';
+import { UserProvider } from './components/common/UserContext';
 
 // Importing the CSS file
 import './assets/Styles/Header.css';
@@ -16,6 +17,7 @@ import './assets/Styles/index.css';
 
 function App() {
   return(
+    <UserProvider>
     <Router>
       <Header />
       <Routes>
@@ -28,6 +30,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </UserProvider>
   );
 }
 
