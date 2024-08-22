@@ -5,7 +5,7 @@
 BookUnlock is a web application that empowers users to discover, search, review, and explore books across various categories. It leverages the Google Books API to provide a vast library of book information and personalized recommendations.
 
 ## Demo
-[![Demo Video](https://youtu.be/FJNF8n-o5aw?si=mL8KKbsWzFDrKWeF/0.jpg)](https://youtu.be/FJNF8n-o5aw?si=mL8KKbsWzFDrKWeF)
+[![Demo Video](https://i.ytimg.com/vi/FJNF8n-o5aw/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgRIGsocjAP&rs=AOn4CLDyMN0LSbyUv1lMCxtdLbIdWqb5fg)](https://youtu.be/FJNF8n-o5aw?si=mL8KKbsWzFDrKWeF)
 
 ## Features
 
